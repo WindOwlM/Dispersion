@@ -8,6 +8,7 @@ if "lineas" not in st.session_state:
     st.session_state.lineas = []
 
 #INICIO FORM
+min_value = datetime.date(2000,1,1)
 
 #dato 1
 tipo_documento = st.selectbox("Tipo de documento",["CC","TI","CE","RC","PA"])
@@ -28,8 +29,6 @@ primer_nombre = st.text_input("Primer nombre")
 segundo_nombre = st.text_input("Segundo nombre")
 
 #dato 8
-min_value = datetime.date(2000,1,1)
-
 periodo_nomina = st.date_input("Periodo Nomina", min_value=min_value)
 
 periodo_nomina_anio = periodo_nomina.year
@@ -59,6 +58,12 @@ tipo_documento_ant = st.selectbox("Tipo de documento anterior",["CC","TI","CE","
 #dato 16
 documento_ant = st.text_input("Numero de documento anterior")
 
+#dato 17
+fecha_gen_mageti = st.date_input("Fecha Generación del Magnético", min_value=min_value)
+
+#dato 18
+fecha_apli_pag = st.date_input("Fecha Aplicación Pago", min_value=min_value)
+
 #FIN FORM    
 
 if st.button("Generar"):
@@ -78,7 +83,9 @@ if st.button("Generar"):
                                                 tipo_cuenta,
                                                 valor_neto,
                                                 tipo_documento_ant,
-                                                documento_ant)
+                                                documento_ant,
+                                                fecha_gen_mageti,
+                                                fecha_apli_pag)
     
     st.session_state.lineas.append(linea_completa)
     

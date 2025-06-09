@@ -13,7 +13,9 @@ def crear_dispersion(tipo_documento,
                      tipo_cuenta,
                      valor_neto,
                      tipo_documento_ant,
-                     documento_ant):
+                     documento_ant,
+                     fecha_gen_mageti,
+                     fecha_apli_pag):
     
     tipo_documento = tipo_documento
     
@@ -44,6 +46,10 @@ def crear_dispersion(tipo_documento,
     
     documento_ant = str(int(documento_ant)).zfill(15)
     
-    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}{cuenta}{tipo_cuenta}{valor_neto}{tipo_documento_ant}{documento_ant}"
+    fecha_gen_mageti = fecha_gen_mageti.strftime('%Y%m%d')
+    
+    fecha_apli_pag = fecha_apli_pag.strftime('%Y%m%d')
+    
+    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}{cuenta}{tipo_cuenta}{valor_neto}{tipo_documento_ant}{documento_ant}{fecha_gen_mageti}{fecha_apli_pag}"
     
     return linea_completa
