@@ -10,7 +10,8 @@ def crear_dispersion(tipo_documento,
                      banco,
                      sucursal,
                      cuenta,
-                     tipo_cuenta):
+                     tipo_cuenta,
+                     valor_neto):
     
     tipo_documento = tipo_documento
     
@@ -34,7 +35,10 @@ def crear_dispersion(tipo_documento,
     
     tipo_cuenta = tipo_cuenta
     
-    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}{cuenta}{tipo_cuenta}"
+    valor_neto = str(int(valor_neto)).zfill(10)
+    valor_neto = f"{valor_neto}00"
+    
+    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}{cuenta}{tipo_cuenta}{valor_neto}"
     
     
     return linea_completa

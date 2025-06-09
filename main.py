@@ -36,16 +36,19 @@ periodo_nomina_mes = periodo_nomina.month
 referencia = st.text_input("Referencia emitida por colpensiones")
 
 #dato 10
-banco = st.text_input("Codigo de banco (2 digitos max)")
+banco = st.text_input("Codigo de banco (2 digitos max)", max_chars=2)
 
 #dato 11
-sucursal = st.text_input("Codigo de la sucursal del banco (4 digitos max)")
+sucursal = st.text_input("Codigo de la sucursal del banco (4 digitos max)", max_chars=4)
 
 #dato 12
 cuenta = st.text_input("Cuenta (Debe ser 0 si es ventanilla)")
 
-#dato 1
+#dato 13
 tipo_cuenta = st.selectbox("Tipo de cuenta",["CA","CP","CC","VE"])
+
+#dato 14
+valor_neto = st.text_input("Valor neto")
 
 #FIN FORM    
 
@@ -63,7 +66,8 @@ if st.button("Generar"):
                                                 banco,
                                                 sucursal,
                                                 cuenta,
-                                                tipo_cuenta)
+                                                tipo_cuenta,
+                                                valor_neto)
     
     st.session_state.lineas.append(linea_completa)
     
