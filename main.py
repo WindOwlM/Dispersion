@@ -6,15 +6,31 @@ st.title("Dispersion")
 if "lineas" not in st.session_state:
     st.session_state.lineas = []
 
+#INICIO FORM
+
 #dato 1
 tipo_documento = st.selectbox("Tipo de documento",["CC","TI","CE","RC","PA"])
 
 #dato 2
 documento = st.text_input("Numero de documento")
 
+#dato 4
+primer_apellido = st.text_input("Primer apellido")
+
+#dato 5
+segundo_apellido = st.text_input("Segundo apellido")
+    
+#dato 6
+primer_nombre = st.text_input("Primer nombre")
+    
+#dato 7
+segundo_nombre = st.text_input("Segundo nombre")
+
+#FIN FORM    
+
 if st.button("Generar"):
     
-    linea_completa = funciones.crear_dispersion(tipo_documento,documento)
+    linea_completa = funciones.crear_dispersion(tipo_documento,documento,primer_apellido,segundo_apellido,primer_nombre,segundo_nombre)
     
     st.session_state.lineas.append(linea_completa)
     
