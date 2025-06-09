@@ -8,7 +8,9 @@ def crear_dispersion(tipo_documento,
                      periodo_nomina_mes,
                      referencia,
                      banco,
-                     sucursal):
+                     sucursal,
+                     cuenta,
+                     tipo_cuenta):
     
     tipo_documento = tipo_documento
     
@@ -28,7 +30,11 @@ def crear_dispersion(tipo_documento,
     
     sucursal = str(int(sucursal)).zfill(4)
     
-    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}"
+    cuenta = str(int(cuenta)).zfill(20)
+    
+    tipo_cuenta = tipo_cuenta
+    
+    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}{cuenta}{tipo_cuenta}"
     
     
     return linea_completa
