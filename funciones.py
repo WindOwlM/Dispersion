@@ -69,3 +69,12 @@ def crear_dispersion(tipo_documento,
     linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}{cuenta}{tipo_cuenta}{valor_neto}{tipo_documento_ant}{documento_ant}{fecha_gen_mageti}{fecha_apli_pag}{tipo_documento_repre}{documento_repre}{primer_apellido_repre}{segundo_apellido_repre}{primer_nombre_repre}{segundo_nombre_repre}."
     
     return linea_completa
+
+def crear_linea_2(fecha, hora):
+    
+    fecha = fecha.strftime('%Y%m%d')
+    hora = hora
+    
+    linea_completa = f"{fecha}{hora}"
+    
+    return linea_completa

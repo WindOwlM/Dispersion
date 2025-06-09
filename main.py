@@ -3,6 +3,7 @@ import funciones
 import datetime
 
 st.title("Dispersion")
+min_value = datetime.date(2000,1,1)
 
 if "lineas" not in st.session_state:
     st.session_state.lineas = []
@@ -10,7 +11,6 @@ if "lineas" not in st.session_state:
 with st.expander("Linea 1"):
 
     #INICIO FORM
-    min_value = datetime.date(2000,1,1)
 
     #dato 1
     tipo_documento = st.selectbox("Tipo de documento",["CC","TI","CE","RC","PA"])
@@ -83,7 +83,7 @@ with st.expander("Linea 1"):
         
     #dato 23
     segundo_nombre_repre = st.text_input("Segundo nombre del representante legal")
-
+    
     #FIN FORM    
 
     if st.button("Generar linea 1"):
@@ -113,6 +113,20 @@ with st.expander("Linea 1"):
                                                     primer_nombre_repre,
                                                     segundo_nombre_repre)
         
+        st.session_state.lineas.append(linea_completa)
+
+with st.expander("Linea 2"):
+    
+    #dato 1
+    fecha = st.date_input("Fecha de pago del archivo", min_value=min_value)
+    hora = st.time_input("Hora de pago del archivo")
+    
+    if st.button("Generar linea 2"):
+        
+        linea_completa = funciones.crear_linea_2(
+            fecha,
+            hora
+        )
         st.session_state.lineas.append(linea_completa)
     
 st.write("📋Resultado:")
