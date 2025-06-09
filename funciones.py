@@ -25,7 +25,7 @@ def crear_dispersion(tipo_documento,
     
     tipo_documento = tipo_documento
     
-    documento = str(int(documento)).zfill(15)
+    documento = str(documento).zfill(15)
     
     primer_apellido = str(primer_apellido).ljust(15,' ')
     segundo_apellido = str(segundo_apellido).ljust(15,' ')
