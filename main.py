@@ -118,10 +118,7 @@ with st.expander("Linea 1"):
 with st.expander("Linea 2"):
     
     #dato 1
-    fecha_hora = st.text_input("Fecha y Hora de pago del archivo (AAAAMMDDHHMMSS)" max_chars=14)
-    
-    #dato 2
-    fecha_hora = st.text_input("Fecha y Hora de pago del archivo (AAAAMMDDHHMMSS)" max_chars=14)
+    fecha_hora = st.text_input("Fecha y Hora de pago del archivo (AAAAMMDDHHMMSS)", max_chars=14)
     
     if st.button("Generar linea 2"):
         
