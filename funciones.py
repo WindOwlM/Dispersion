@@ -1,4 +1,4 @@
-def crear_dispersion(tipo_documento,documento,primer_apellido,segundo_apellido,primer_nombre,segundo_nombre):
+def crear_dispersion(tipo_documento,documento,primer_apellido,segundo_apellido,primer_nombre,segundo_nombre,periodo_nomina_anio,periodo_nomina_mes):
     
     tipo_documento = tipo_documento
     
@@ -10,6 +10,8 @@ def crear_dispersion(tipo_documento,documento,primer_apellido,segundo_apellido,p
     primer_nombre = str(primer_nombre).ljust(15,' ')
     segundo_nombre = str(segundo_nombre).ljust(15,' ')
     
-    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}"
+    periodo_nomina = f"{periodo_nomina_anio}{periodo_nomina_mes:02d}"
+    
+    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}"
     
     return linea_completa

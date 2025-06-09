@@ -26,11 +26,17 @@ primer_nombre = st.text_input("Primer nombre")
 #dato 7
 segundo_nombre = st.text_input("Segundo nombre")
 
+#dato 8
+periodo_nomina = st.date_input("Periodo Nomina")
+
+periodo_nomina_anio = periodo_nomina.year
+periodo_nomina_mes = periodo_nomina.month
+
 #FIN FORM    
 
 if st.button("Generar"):
     
-    linea_completa = funciones.crear_dispersion(tipo_documento,documento,primer_apellido,segundo_apellido,primer_nombre,segundo_nombre)
+    linea_completa = funciones.crear_dispersion(tipo_documento,documento,primer_apellido,segundo_apellido,primer_nombre,segundo_nombre,periodo_nomina_anio,periodo_nomina_mes)
     
     st.session_state.lineas.append(linea_completa)
     
