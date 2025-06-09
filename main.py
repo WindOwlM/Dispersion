@@ -118,14 +118,16 @@ with st.expander("Linea 1"):
 with st.expander("Linea 2"):
     
     #dato 1
-    fecha = st.date_input("Fecha de pago del archivo", min_value=min_value)
-    hora = st.time_input("Hora de pago del archivo")
+    fecha_hora = st.text_input("Fecha y Hora de pago del archivo (AAAAMMDDHHMMSS)" max_chars=14)
+    
+    #dato 2
+    fecha_hora = st.text_input("Fecha y Hora de pago del archivo (AAAAMMDDHHMMSS)" max_chars=14)
     
     if st.button("Generar linea 2"):
         
         linea_completa = funciones.crear_linea_2(
-            fecha,
-            hora
+            fecha_hora,
+            
         )
         st.session_state.lineas.append(linea_completa)
     
