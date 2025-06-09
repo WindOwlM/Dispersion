@@ -37,20 +37,20 @@ def crear_dispersion(tipo_documento,
     
     referencia = str(referencia).ljust(50,' ')
     
-    banco = str(int(banco)).zfill(2)
+    banco = str(banco).zfill(2)
     
-    sucursal = str(int(sucursal)).zfill(4)
+    sucursal = str(sucursal).zfill(4)
     
-    cuenta = str(int(cuenta)).zfill(20)
+    cuenta = str(cuenta).zfill(20)
     
     tipo_cuenta = tipo_cuenta
     
-    valor_neto = str(int(valor_neto)).zfill(10)
+    valor_neto = str(valor_neto).zfill(10)
     valor_neto = f"{valor_neto}00"
     
     tipo_documento_ant = tipo_documento_ant
     
-    documento_ant = str(int(documento_ant)).zfill(15)
+    documento_ant = str(documento_ant).zfill(15)
     
     fecha_gen_mageti = fecha_gen_mageti.strftime('%Y%m%d')
     
@@ -58,7 +58,7 @@ def crear_dispersion(tipo_documento,
     
     tipo_documento_repre = tipo_documento_repre
     
-    documento_repre = str(int(documento_repre)).zfill(15)
+    documento_repre = str(documento_repre).zfill(15)
     
     primer_apellido_repre = str(primer_apellido_repre).ljust(15,' ')
     segundo_apellido_repre = str(segundo_apellido_repre).ljust(15,' ')
