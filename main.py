@@ -1,5 +1,6 @@
 import streamlit as st
 import funciones
+import datetime
 
 st.title("Dispersion")
 
@@ -27,7 +28,9 @@ primer_nombre = st.text_input("Primer nombre")
 segundo_nombre = st.text_input("Segundo nombre")
 
 #dato 8
-periodo_nomina = st.date_input("Periodo Nomina")
+min_value = datetime.date(2000,1,1)
+
+periodo_nomina = st.date_input("Periodo Nomina", min_value=min_value)
 
 periodo_nomina_anio = periodo_nomina.year
 periodo_nomina_mes = periodo_nomina.month
@@ -50,6 +53,12 @@ tipo_cuenta = st.selectbox("Tipo de cuenta",["CA","CP","CC","VE"])
 #dato 14
 valor_neto = st.text_input("Valor neto")
 
+#dato 15
+tipo_documento_ant = st.selectbox("Tipo de documento anterior",["CC","TI","CE","RC","PA"])
+
+#dato 16
+documento_ant = st.text_input("Numero de documento anterior")
+
 #FIN FORM    
 
 if st.button("Generar"):
@@ -67,7 +76,9 @@ if st.button("Generar"):
                                                 sucursal,
                                                 cuenta,
                                                 tipo_cuenta,
-                                                valor_neto)
+                                                valor_neto,
+                                                tipo_documento_ant,
+                                                documento_ant)
     
     st.session_state.lineas.append(linea_completa)
     
