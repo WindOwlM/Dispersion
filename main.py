@@ -311,6 +311,37 @@ with st.expander("linea 3"):
         
         st.session_state.cupones.append(linea_completa)
 
+with st.expander("linea 4"):
+    
+    #dato 1
+    tipo_documento_cupon_3 = st.selectbox("Tipo de documento cupon 3",["CC","CE"])
+    
+    #dato 2
+    num_documento_cupon_3 = st.text_input("Numero de documento cupon 3", max_chars=15)
+    
+    #dato 3
+    var_devenga = st.text_input("Valor devengados", max_chars=14)
+    
+    #dato 4
+    var_deducidos = st.text_input("Valor deducidos", max_chars=14)
+    
+    #dato 5
+    var_neto = st.text_input("Valor neto", max_chars=14)
+    
+    #dato 6
+    mensaje_per = st.text_area("Valor neto", max_chars=250)
+    
+    if st.button("Generar linea cupones 4"):
+        
+        linea_completa = funciones.cupones_4(tipo_documento_cupon_3,
+                                             num_documento_cupon_3,
+                                             var_devenga,
+                                             var_deducidos,
+                                             var_neto,
+                                             mensaje_per)
+        
+        st.session_state.cupones.append(linea_completa)
+
 st.write("📋Resultado:")
 for i, linea in enumerate(st.session_state.cupones, 1):
     st.text(f"{linea}")

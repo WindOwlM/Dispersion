@@ -195,6 +195,30 @@ def cupones_3(tipo_documento_cupon_2,
     
     return linea_completa
 
+def cupones_4(tipo_documento_cupon_3,
+              num_documento_cupon_3,
+              var_devenga,
+              var_deducidos,
+              var_neto,
+              mensaje_per):
+    
+    num_documento_cupon_3 = str(num_documento_cupon_3).zfill(15)
+    
+    var_devenga = str(var_devenga).zfill(12)
+    var_devenga = f"{var_devenga}00"
+    
+    var_deducidos = str(var_deducidos).zfill(12)
+    var_deducidos = f"{var_deducidos}00"
+    
+    var_neto = str(var_neto).zfill(12)
+    var_neto = f"{var_neto}00"
+    
+    mensaje_per = str(mensaje_per).ljust(250,' ')
+    
+    linea_completa = f"3{tipo_documento_cupon_3}{num_documento_cupon_3}{var_devenga}{var_deducidos}{var_neto}{mensaje_per}."
+    
+    return linea_completa
+
 #De aqui para abajo es Ordenes de no pago
 
 def Orden_no_pago(tipo_documento,
