@@ -363,13 +363,30 @@ with st.expander("Linea 1"):
     #dato 4 
     segundo_apellido_onp= st.text_input("Segundo apellido", max_chars=15)
 
+    #dato 5
+    primer_nombre_onp= st.text_input("Primer nombre", max_chars=15)
+
+    #dato 6
+    segundo_nombre_onp= st.text_input("Segundo apellido", max_chars=15)
+
+    #dato 7
+    periodo_nomina_onp= st.text_input("Periodo nomina en formato AAAAMM", max_chars=6)
+
+    #dato 8
+    codigo_banco= st.text_input("Codigo del banco", max_chars=2)
+
+    #dato 9
     
     if st.button("Generar linea onp 1"):
         
         linea_completa = funciones.Orden_no_pago(tipo_documento,
                                                  num_documento_onp,
                                                  primer_apellido_onp,
-                                                 segundo_apellido_onp)
+                                                 segundo_apellido_onp,
+                                                 primer_nombre_onp,
+                                                 segundo_nombre_onp,
+                                                 periodo_nomina_onp,
+                                                 codigo_banco)
         
         st.session_state.onp.append(linea_completa)
 

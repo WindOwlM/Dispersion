@@ -224,11 +224,17 @@ def cupones_4(tipo_documento_cupon_3,
 def Orden_no_pago(tipo_documento,
                   num_documento_onp,
                   primer_apellido_onp,
-                  segundo_apellido_onp):
+                  segundo_apellido_onp,
+                  primer_nombre_onp,
+                  segundo_nombre_onp,
+                  periodo_nomina_onp,
+                  codigo_banco):
      num_documento_onp = str(num_documento_onp).zfill(15)
      primer_apellido_onp = str(primer_apellido_onp).ljust(15,' ')
      segundo_apellido_onp = str(segundo_apellido_onp).ljust(15,' ')
+     primer_nombre_onp = str(primer_nombre_onp).ljust(15,' ')
+     segundo_nombre_onp = str(segundo_nombre_onp).ljust(15,' ')
 
-     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}."
+     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{codigo_banco}."
      
      return linea_completa
