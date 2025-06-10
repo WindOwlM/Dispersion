@@ -122,10 +122,7 @@ with st.expander("Linea 2"):
     
     if st.button("Generar linea 2"):
         
-        linea_completa = funciones.crear_linea_2(
-            fecha_hora
-            
-        )
+        linea_completa = funciones.crear_linea_2(fecha_hora)
         st.session_state.lineas.append(linea_completa)
     
 st.write("📋Resultado:")

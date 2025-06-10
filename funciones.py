@@ -72,9 +72,6 @@ def crear_dispersion(tipo_documento,
 
 def crear_linea_2(fecha_hora):
     
-
-  
-    
     linea_completa = f"{fecha_hora}"
     
     return linea_completa
