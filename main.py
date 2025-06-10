@@ -199,11 +199,8 @@ with st.expander("Linea 1"):
     
     #dato 8
     mensaje = st.text_area("Mensaje variable",max_chars=250)
-
-
-
     
-    if st.button("Generar linea 1"):
+    if st.button("Generar linea cupones 1"):
         
         linea_completa = funciones.cupones_1(cod_ent_bancaria,
                                              nom_ent_banco,
@@ -223,6 +220,7 @@ for i, linea in enumerate(st.session_state.cupones, 1):
 
 #De aqui para abajo es Ordenes de no pago
 st.title("Ordenes de no pago")
+
 with st.expander("Linea 1"):
     
     #dato 1
@@ -231,7 +229,7 @@ with st.expander("Linea 1"):
 
 
     
-    if st.button("Generar linea 1"):
+    if st.button("Generar linea onp 1"):
         
         linea_completa = funciones.Orden_no_pago(tipo_documento)
         
