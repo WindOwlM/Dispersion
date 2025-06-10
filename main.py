@@ -300,7 +300,7 @@ with st.expander("linea 3"):
     #dato 6
     var_concept = st.text_input("Valor concepto", max_chars=14)
 
-    if st.button("Generar linea cupones 2"):
+    if st.button("Generar linea cupones 3"):
         
         linea_completa = funciones.cupones_3(tipo_documento_cupon_2,
                                              num_documento_cupon_2,
