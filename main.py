@@ -204,6 +204,74 @@ with st.expander("Linea 1"):
         
         st.session_state.cupones.append(linea_completa)
 
+with st.expander("Linea 2"):
+    
+    #dato 1
+    num_cupon = st.text_input("Numero de cupon",max_chars=12)
+    
+    #dato 2
+    tipo_documento_cupon_1 = st.selectbox("Tipo de documento cupon 1",["CC","TI","CE"])
+    
+    #dato 3
+    num_documento_cupon_1 = st.text_input("Numero documento pensionado", max_chars=15)
+    
+    #dato 4
+    primer_apellido_cupon = st.text_input("Primer apellido cupones", max_chars=15)
+
+    #dato 5
+    segundo_apellido_cupon = st.text_input("Segundo apellido cupones", max_chars=15)
+        
+    #dato 6
+    primer_nombre_cupon = st.text_input("Primer nombre cupones", max_chars=15)
+        
+    #dato 7
+    segundo_nombre_cupon = st.text_input("Segundo nombre cupones", max_chars=15)
+
+    #dato 8
+    cod_sucursal_entidad = st.text_input("Codigo sucursal entidad bancaria",max_chars=4)
+    
+    #dato 9
+    nom_suc_ent_bancaria = st.text_input("Codigo sucursal entidad bancaria",max_chars=25)
+    
+    #dato 10
+    num_cuenta_cupon = st.text_input("Numero de cuenta",max_chars=17)
+    
+    #dato 11
+    direc_sucursal = st.text_input("Dirección Sucursal Entidad Bancaria",max_chars=45)
+    
+    #dato 12
+    cod_depart_dane = st.text_input("Código Departamento-Dane Sucursal Entidad Bancaria",max_chars=2)
+    
+    #dato 13
+    nom_depart_sucursal = st.text_area("Nombre Departamento Sucursal Entidad Bancaria",max_chars=50)
+    
+    #dato 14
+    cod_ciudad_dane = st.text_input("Código Ciudad/Municipio-Dane Sucursal Entidad Bancaria",max_chars=3)
+    
+    #dato 15
+    nom_ciudad_sucursal = st.text_area("Nombre Ciudad/Municipio Sucursal Entidad Bancaria",max_chars=50)
+    
+    if st.button("Generar linea cupones 2"):
+        
+        linea_completa = funciones.cupones_2(num_cupon,
+                                            tipo_documento_cupon_1,
+                                            num_documento_cupon_1,
+                                            primer_apellido_cupon,
+                                            segundo_apellido_cupon,
+                                            primer_nombre_cupon,
+                                            segundo_nombre_cupon,
+                                            cod_sucursal_entidad,
+                                            nom_suc_ent_bancaria,
+                                            num_cuenta_cupon,
+                                            direc_sucursal,
+                                            cod_depart_dane,
+                                            nom_depart_sucursal,
+                                            cod_ciudad_dane,
+                                            nom_ciudad_sucursal)
+        
+        st.session_state.cupones.append(linea_completa)
+        
+
 st.write("📋Resultado:")
 for i, linea in enumerate(st.session_state.cupones, 1):
     st.text(f"{linea}")
