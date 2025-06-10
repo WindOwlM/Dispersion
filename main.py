@@ -213,8 +213,6 @@ with st.expander("Linea 1"):
         
         st.session_state.cupones.append(linea_completa)
 
-<<<<<<< Updated upstream
-=======
 with st.expander("Linea 2"):
     
     #dato 1
@@ -287,7 +285,6 @@ with st.expander("linea 3"):
     #dato 1
     tipo_documento_cupon_2 = st.selectbox("Tipo de documento cupon 2",["CC","TI","CE"])
 
->>>>>>> Stashed changes
 st.write("📋Resultado:")
 for i, linea in enumerate(st.session_state.cupones, 1):
     st.text(f"{linea}")
