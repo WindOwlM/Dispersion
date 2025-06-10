@@ -177,10 +177,10 @@ def cupones_2(num_cupon,
 
 #De aqui para abajo es Ordenes de no pago
 
-def Orden_no_pago(tipo_documento
-                  ):
-     
+def Orden_no_pago(tipo_documento,
+                  num_documento_onp):
+     num_documento_onp = str(num_documento_onp).zfill(15)
 
-     linea_completa = f"0{tipo_documento}."
+     linea_completa = f"0{tipo_documento}{num_documento_onp}."
      
      return linea_completa

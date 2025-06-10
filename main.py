@@ -298,12 +298,17 @@ with st.expander("Linea 1"):
     #dato 1
     tipo_documento = st.selectbox("Tipo de documento",["CC","CE","RC","TI","PA"])
 
+    #dato2
+    num_documento_onp= st.text_input("Numero documento pensionado", max_chars=15)
+
+
 
 
     
     if st.button("Generar linea onp 1"):
         
-        linea_completa = funciones.Orden_no_pago(tipo_documento)
+        linea_completa = funciones.Orden_no_pago(tipo_documento,
+                                                 num_documento_onp)
         
         st.session_state.onp.append(linea_completa)
 
