@@ -134,5 +134,6 @@ with st.expander("Linea 2"):
         st.session_state.lineas.append(linea_completa)
     
 st.write("📋Resultado:")
+st.write("Maicolsin")
 for i, linea in enumerate(st.session_state.lineas, 1):
     st.text(f"{linea}")
