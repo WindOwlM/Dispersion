@@ -132,8 +132,7 @@ with st.expander("Linea 2"):
                                                  cantidad_total_registros,
                                                  valor_total_pagos)
         st.session_state.lineas.append(linea_completa)
-st.write("algo")    
+
 st.write("📋Resultado:")
-st.write("Maicolsin")
 for i, linea in enumerate(st.session_state.lineas, 1):
     st.text(f"{linea}")
