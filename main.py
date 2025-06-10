@@ -119,10 +119,14 @@ with st.expander("Linea 2"):
     
     #dato 1
     fecha_hora = st.text_input("Fecha y Hora de pago del archivo (AAAAMMDDHHMMSS)", max_chars=14)
+
+    #dato 2
+    cantidad_total_registros=st.text_input("Cantitad total de registros de mesadas a procesar", max_chars=8)
     
     if st.button("Generar linea 2"):
         
-        linea_completa = funciones.crear_linea_2(fecha_hora)
+        linea_completa = funciones.crear_linea_2(fecha_hora,
+                                                 cantidad_total_registros)
         st.session_state.lineas.append(linea_completa)
     
 st.write("📋Resultado:")

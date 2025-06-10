@@ -70,8 +70,11 @@ def crear_dispersion(tipo_documento,
     
     return linea_completa
 
-def crear_linea_2(fecha_hora):
+def crear_linea_2(fecha_hora,
+                  cantidad_total_registros):
     
-    linea_completa = f"{fecha_hora}"
+    cantidad_total_registros=str(cantidad_total_registros).zfill(8)
+    
+    linea_completa = f"{fecha_hora}{cantidad_total_registros}"
     
     return linea_completa
