@@ -136,7 +136,7 @@ with st.expander("Linea 2"):
     cantidad_registros_pago_ventanilla=st.text_input("Cantitad de registros pago por ventanilla", max_chars=8)
 
     #dato 7 
-    valor_total_pago_ventanilla=st.text_input("Valor total abono en cuenta", max_chars=18)
+    valor_total_pago_ventanilla=st.text_input("Valor total pago por ventanillas", max_chars=18)
 
     #dato 8
     tipo_cuenta_dispersora = st.selectbox("Tipo de cuenta dispersadora originadora 1 - CTA.Corriente, 2 - Cuenta ahorros",["1","2"])
