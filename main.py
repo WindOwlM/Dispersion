@@ -125,12 +125,17 @@ with st.expander("Linea 2"):
 
     #dato 3
     valor_total_pagos=st.text_input("Valor total de los pagos", max_chars=18)
+
+    #dato 4
+    cantidad_registros_abono_cuenta=st.text_input("Cantitad de registros por abono en cuenta", max_chars=8)
+
     
     if st.button("Generar linea 2"):
         
         linea_completa = funciones.crear_linea_2(fecha_hora,
                                                  cantidad_total_registros,
-                                                 valor_total_pagos)
+                                                 valor_total_pagos,
+                                                 cantidad_registros_abono_cuenta)
         st.session_state.lineas.append(linea_completa)
 
 st.write("📋Resultado:")
