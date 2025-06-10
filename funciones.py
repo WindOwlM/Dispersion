@@ -79,7 +79,8 @@ def crear_linea_2(fecha_hora,
                   valor_total_pago_ventanilla,
                   tipo_cuenta_dispersora,
                   numero_cuenta_dispersora,
-                  tipo_identificacion_empresa_dispersora):
+                  tipo_identificacion_empresa_dispersora,
+                  num_identificacion_empresa):
     
     cantidad_total_registros=str(cantidad_total_registros).zfill(8)
     valor_total_pagos = str(valor_total_pagos).zfill(16)
@@ -91,9 +92,10 @@ def crear_linea_2(fecha_hora,
     valor_total_pago_ventanilla = str(valor_total_pago_ventanilla).zfill(16)
     valor_total_pago_ventanilla = f"{valor_total_pago_ventanilla}00"
     numero_cuenta_dispersora=str(numero_cuenta_dispersora).zfill(15)
+    num_identificacion_empresa=str(num_identificacion_empresa).zfill(12)
 
    
-    linea_completa = f"{fecha_hora}{cantidad_total_registros}{valor_total_pagos}{cantidad_registros_abono_cuenta}{valor_total_abono}{cantidad_registros_pago_ventanilla}{valor_total_pago_ventanilla}{tipo_cuenta_dispersora}{numero_cuenta_dispersora}{tipo_identificacion_empresa_dispersora}"
+    linea_completa = f"{fecha_hora}{cantidad_total_registros}{valor_total_pagos}{cantidad_registros_abono_cuenta}{valor_total_abono}{cantidad_registros_pago_ventanilla}{valor_total_pago_ventanilla}{tipo_cuenta_dispersora}{numero_cuenta_dispersora}{tipo_identificacion_empresa_dispersora}{num_identificacion_empresa}"
     
     return linea_completa
 

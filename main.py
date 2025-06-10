@@ -148,7 +148,8 @@ with st.expander("Linea 2"):
     #dato 10
     tipo_identificacion_empresa_dispersora = st.selectbox("Tipo de identificacion de la empresa dispersora (Siempre debe ser N - NIT)",["N"])
 
-
+    #dato 11
+    num_identificacion_empresa =st.text_input("Numero de identifiacion de la empresa originadora", max_chars=12)
 
     if st.button("Generar linea 2"):
         
@@ -161,7 +162,8 @@ with st.expander("Linea 2"):
                                                  valor_total_pago_ventanilla,
                                                  tipo_cuenta_dispersora,
                                                  numero_cuenta_dispersora,
-                                                 tipo_identificacion_empresa_dispersora)
+                                                 tipo_identificacion_empresa_dispersora,
+                                                 num_identificacion_empresa)
         st.session_state.lineas.append(linea_completa)
 
 st.write("📋Resultado:")
