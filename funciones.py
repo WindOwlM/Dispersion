@@ -129,6 +129,51 @@ def cupones_1(cod_ent_bancaria,
     
     return linea_completa
 
+def cupones_2(num_cupon,
+              tipo_documento_cupon_1,
+              num_documento_cupon_1,
+              primer_apellido_cupon,
+              segundo_apellido_cupon,
+              primer_nombre_cupon,
+              segundo_nombre_cupon,
+              cod_sucursal_entidad,
+              nom_suc_ent_bancaria,
+              num_cuenta_cupon,
+              direc_sucursal,
+              cod_depart_dane,
+              nom_depart_sucursal,
+              cod_ciudad_dane,
+              nom_ciudad_sucursal):
+
+    num_cupon = str(num_cupon).ljust(12,' ')
+    
+    num_documento_cupon_1 = str(num_documento_cupon_1).zfill(15)
+    
+    primer_apellido_cupon = str(primer_apellido_cupon).ljust(15,' ')
+    segundo_apellido_cupon = str(segundo_apellido_cupon).ljust(15,' ')
+
+    primer_nombre_cupon = str(primer_nombre_cupon).ljust(15,' ')
+    segundo_nombre_cupon = str(segundo_nombre_cupon).ljust(15,' ')
+    
+    cod_sucursal_entidad = str(cod_sucursal_entidad).ljust(4,' ')
+    
+    nom_suc_ent_bancaria = str(nom_suc_ent_bancaria).ljust(25,' ')
+    
+    num_cuenta_cupon = str(num_cuenta_cupon).zfill(17)
+    
+    direc_sucursal = str(direc_sucursal).ljust(45,' ')
+    
+    cod_depart_dane = str(cod_depart_dane).zfill(2)
+    
+    nom_depart_sucursal = str(nom_depart_sucursal).ljust(50,' ')
+    
+    cod_ciudad_dane = str(cod_ciudad_dane).zfill(3)
+    
+    nom_ciudad_sucursal = str(nom_ciudad_sucursal).ljust(50,' ')
+    
+    linea_completa = f"1{num_cupon}{tipo_documento_cupon_1}{num_documento_cupon_1}{primer_apellido_cupon}{segundo_apellido_cupon}{primer_nombre_cupon}{segundo_nombre_cupon}{cod_sucursal_entidad}{nom_suc_ent_bancaria}{num_cuenta_cupon}{direc_sucursal}{cod_depart_dane}{nom_depart_sucursal}{cod_ciudad_dane}{nom_ciudad_sucursal}"
+
+    return linea_completa
 
 #De aqui para abajo es Ordenes de no pago
 
