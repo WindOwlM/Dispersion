@@ -171,6 +171,6 @@ def cupones_2(num_cupon,
     
     nom_ciudad_sucursal = str(nom_ciudad_sucursal).ljust(50,' ')
     
-    linea_completa = f"1{num_cupon}{tipo_documento_cupon_1}{num_documento_cupon_1}{primer_apellido_cupon}{segundo_apellido_cupon}{primer_nombre_cupon}{segundo_nombre_cupon}{cod_sucursal_entidad}{nom_suc_ent_bancaria}{num_cuenta_cupon}{direc_sucursal}{cod_depart_dane}{nom_depart_sucursal}{cod_ciudad_dane}{nom_ciudad_sucursal}"
+    linea_completa = f"1{num_cupon}{tipo_documento_cupon_1}{num_documento_cupon_1}{primer_apellido_cupon}{segundo_apellido_cupon}{primer_nombre_cupon}{segundo_nombre_cupon}{cod_sucursal_entidad}{nom_suc_ent_bancaria}{num_cuenta_cupon}{direc_sucursal}{cod_depart_dane}{nom_depart_sucursal}{cod_ciudad_dane}{nom_ciudad_sucursal}."
     
     return linea_completa
