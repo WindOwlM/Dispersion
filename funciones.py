@@ -175,6 +175,26 @@ def cupones_2(num_cupon,
 
     return linea_completa
 
+def cupones_3(tipo_documento_cupon_2,
+              num_documento_cupon_2,
+              tipo_movimiento,
+              con_concept,
+              nom_concept,
+              var_concept):
+    
+    num_documento_cupon_2 = str(num_documento_cupon_2).zfill(15)
+    
+    con_concept = str(con_concept).zfill(15)
+    
+    nom_concept = str(nom_concept).ljust(40,' ')
+    
+    var_concept = str(var_concept).zfill(12)
+    var_concept = f"{var_concept}00"
+    
+    linea_completa = f"2{tipo_documento_cupon_2}{num_documento_cupon_2}{tipo_movimiento}{con_concept}{nom_concept}{var_concept}"
+    
+    return linea_completa
+
 #De aqui para abajo es Ordenes de no pago
 
 def Orden_no_pago(tipo_documento

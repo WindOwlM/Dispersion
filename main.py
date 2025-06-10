@@ -284,6 +284,32 @@ with st.expander("linea 3"):
     
     #dato 1
     tipo_documento_cupon_2 = st.selectbox("Tipo de documento cupon 2",["CC","TI","CE"])
+    
+    #dato 2
+    num_documento_cupon_2 = st.text_input("Numero de documento cupon 2", max_chars=15)
+    
+    #dato 3
+    tipo_movimiento = st.selectbox("Tipo de movimiento (1 = Devengo 2 = Deducido)",["1","2"])
+    
+    #dato 4
+    con_concept = st.text_input("Codigo concepto", max_chars=5)
+    
+    #dato 5
+    nom_concept = st.text_input("Nombre concepto", max_chars=40)
+    
+    #dato 6
+    var_concept = st.text_input("Valor concepto", max_chars=14)
+
+    if st.button("Generar linea cupones 2"):
+        
+        linea_completa = funciones.cupones_3(tipo_documento_cupon_2,
+                                             num_documento_cupon_2,
+                                             tipo_movimiento,
+                                             con_concept,
+                                             nom_concept,
+                                             var_concept)
+        
+        st.session_state.cupones.append(linea_completa)
 
 st.write("📋Resultado:")
 for i, linea in enumerate(st.session_state.cupones, 1):
