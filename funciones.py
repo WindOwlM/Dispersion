@@ -222,7 +222,9 @@ def cupones_4(tipo_documento_cupon_3,
 #De aqui para abajo es Ordenes de no pago
 
 def Orden_no_pago(tipo_documento,
-                  num_documento_onp):
+                  num_documento_onp,
+                  primer_apellido_onp,
+                  segundo_apellido_onp):
      num_documento_onp = str(num_documento_onp).zfill(15)
      primer_apellido_onp = str(primer_apellido_onp).ljust(15,' ')
      segundo_apellido_onp = str(segundo_apellido_onp).ljust(15,' ')
