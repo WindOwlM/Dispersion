@@ -191,7 +191,7 @@ with st.expander("Linea 1"):
     #dato 8
     mensaje = st.text_area("Mensaje variable",max_chars=250)
     
-    if st.button("Generar linea 1"):
+    if st.button("Generar linea cupones 1"):
         
         linea_completa = funciones.cupones_1(cod_ent_bancaria,
                                              nom_ent_banco,
