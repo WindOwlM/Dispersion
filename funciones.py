@@ -200,7 +200,9 @@ def cupones_3(tipo_documento_cupon_2,
 def Orden_no_pago(tipo_documento,
                   num_documento_onp):
      num_documento_onp = str(num_documento_onp).zfill(15)
+     primer_apellido_onp = str(primer_apellido_onp).ljust(15,' ')
+     segundo_apellido_onp = str(segundo_apellido_onp).ljust(15,' ')
 
-     linea_completa = f"0{tipo_documento}{num_documento_onp}."
+     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}."
      
      return linea_completa

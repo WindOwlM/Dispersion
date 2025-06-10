@@ -326,15 +326,19 @@ with st.expander("Linea 1"):
 
     #dato2
     num_documento_onp= st.text_input("Numero documento", max_chars=15)
+    #dato 3
+    primer_apellido_onp= st.text_input("Primer apellido", max_chars=15)
 
-
-
+    #dato 4 
+    segundo_apellido_onp= st.text_input("Segundo apellido", max_chars=15)
 
     
     if st.button("Generar linea onp 1"):
         
         linea_completa = funciones.Orden_no_pago(tipo_documento,
-                                                 num_documento_onp)
+                                                 num_documento_onp,
+                                                 primer_apellido_onp,
+                                                 segundo_apellido_onp)
         
         st.session_state.onp.append(linea_completa)
 
