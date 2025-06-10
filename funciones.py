@@ -87,3 +87,32 @@ def crear_linea_2(fecha_hora,
     linea_completa = f"{fecha_hora}{cantidad_total_registros}{valor_total_pagos}{cantidad_registros_abono_cuenta}{valor_total_abono}"
     
     return linea_completa
+
+def cupones_1(cod_ent_bancaria,
+              nom_ent_banco,
+              cant_sucursal,
+              cant_pensionados,
+              anio_nomina,
+              mes_nomina,
+              fech_vence,
+              mensaje):
+    
+    cod_ent_bancaria = str(cod_ent_bancaria).zfill(3)
+    
+    nom_ent_banco = str(nom_ent_banco).ljust(50,' ')
+    
+    cant_sucursal = str(cant_sucursal).zfill(4)
+    
+    cant_pensionados = str(cant_pensionados).zfill(7)
+    
+    anio_nomina = str(anio_nomina).zfill(4)
+    
+    mes_nomina = str(mes_nomina).zfill(2)
+    
+    fech_vence = str(fech_vence).zfill(10)
+    
+    mensaje = str(mensaje).ljust(250,' ')
+    
+    linea_completa = f"0{cod_ent_bancaria}{nom_ent_banco}{cant_sucursal}{cant_pensionados}{anio_nomina}{mes_nomina}{fech_vence}{mensaje}."
+    
+    return linea_completa

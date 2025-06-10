@@ -7,6 +7,7 @@ min_value = datetime.date(2000,1,1)
 
 if "lineas" not in st.session_state:
     st.session_state.lineas = []
+    st.session_state.cupones = []
 
 with st.expander("Linea 1"):
 
@@ -145,4 +146,50 @@ with st.expander("Linea 2"):
 
 st.write("📋Resultado:")
 for i, linea in enumerate(st.session_state.lineas, 1):
+    st.text(f"{linea}")
+    
+    
+st.title("Cupones")
+
+with st.expander("Linea 1"):
+    
+    #dato 1
+    cod_ent_bancaria = st.text_input("Codigo de entidad bancaria",max_chars=3)
+    
+    #dato 2
+    nom_ent_banco = st.text_input("Nombre de la entidad bancaria",max_chars=50)
+    
+    #dato 3
+    cant_sucursal = st.text_input("Cantidad de sucursales por entidad bancaria",max_chars=4)
+    
+    #dato 4
+    cant_pensionados = st.text_input("Cantidad de pensionados por entidad bancaria",max_chars=7)
+    
+    #dato 5
+    anio_nomina = st.text_input("Año nomina (AAAA)",max_chars=4)
+    
+    #dato 6
+    mes_nomina = st.text_input("Mes nomina (MM)",max_chars=2)
+    
+    #dato 7
+    fech_vence = st.text_input("Fecha de vencimiento (DD/MM/AAAA)",max_chars=10)
+    
+    #dato 8
+    mensaje = st.text_area("Mensaje variable",max_chars=250)
+    
+    if st.button("Generar linea 1"):
+        
+        linea_completa = funciones.cupones_1(cod_ent_bancaria,
+                                             nom_ent_banco,
+                                             cant_sucursal,
+                                             cant_pensionados,
+                                             anio_nomina,
+                                             mes_nomina,
+                                             fech_vence,
+                                             mensaje)
+        
+        st.session_state.cupones.append(linea_completa)
+
+st.write("📋Resultado:")
+for i, linea in enumerate(st.session_state.cupones, 1):
     st.text(f"{linea}")
