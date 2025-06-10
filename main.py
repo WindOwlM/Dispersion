@@ -299,7 +299,7 @@ with st.expander("Linea 1"):
     tipo_documento = st.selectbox("Tipo de documento",["CC","CE","RC","TI","PA"])
 
     #dato2
-    num_documento_onp= st.text_input("Numero documento pensionado", max_chars=15)
+    num_documento_onp= st.text_input("Numero documento", max_chars=15)
 
 
 
