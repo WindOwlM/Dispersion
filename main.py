@@ -142,7 +142,8 @@ with st.expander("Linea 2"):
     #dato 8
     tipo_cuenta_dispersora = st.selectbox("Tipo de cuenta dispersadora originadora 1 - CTA.Corriente, 2 - Cuenta ahorros",["1","2"])
 
-
+    #dato 9
+    numero_cuenta_dispersora=st.text_input("Numero de la cuenta dispersora", max_chars=15)
 
 
 
@@ -155,7 +156,8 @@ with st.expander("Linea 2"):
                                                  valor_total_abono,
                                                  cantidad_registros_pago_ventanilla,
                                                  valor_total_pago_ventanilla,
-                                                 tipo_cuenta_dispersora)
+                                                 tipo_cuenta_dispersora,
+                                                 numero_cuenta_dispersora)
         st.session_state.lineas.append(linea_completa)
 
 st.write("📋Resultado:")
@@ -190,8 +192,11 @@ with st.expander("Linea 1"):
     
     #dato 8
     mensaje = st.text_area("Mensaje variable",max_chars=250)
+
+
+
     
-    if st.button("Generar linea cupones 1"):
+    if st.button("Generar linea 1"):
         
         linea_completa = funciones.cupones_1(cod_ent_bancaria,
                                              nom_ent_banco,
