@@ -367,7 +367,7 @@ with st.expander("Linea 1"):
     primer_nombre_onp= st.text_input("Primer nombre", max_chars=15)
 
     #dato 6
-    segundo_nombre_onp= st.text_input("Segundo apellido", max_chars=15)
+    segundo_nombre_onp= st.text_input("Segundo nombre", max_chars=15)
 
     #dato 7
     periodo_nomina_onp= st.text_input("Periodo nomina en formato AAAAMM", max_chars=6)
