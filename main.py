@@ -135,6 +135,13 @@ with st.expander("Linea 2"):
     #dato 6
     cantidad_registros_pago_ventanilla=st.text_input("Cantitad de registros pago por ventanilla", max_chars=8)
 
+    #dato 7 
+    valor_total_pago_ventanilla=st.text_input("Valor total abono en cuenta", max_chars=18)
+
+    #dato 8
+    tipo_cuenta_dispersora = st.selectbox("Tipo de cuenta dispersadora originadora 1 - CTA.Corriente, 2 - Cuenta ahorros",["1","2"])
+
+
 
 
 
@@ -145,7 +152,9 @@ with st.expander("Linea 2"):
                                                  valor_total_pagos,
                                                  cantidad_registros_abono_cuenta,
                                                  valor_total_abono,
-                                                 cantidad_registros_pago_ventanilla)
+                                                 cantidad_registros_pago_ventanilla,
+                                                 valor_total_pago_ventanilla,
+                                                 tipo_cuenta_dispersora)
         st.session_state.lineas.append(linea_completa)
 
 st.write("📋Resultado:")
