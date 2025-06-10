@@ -184,7 +184,7 @@ def cupones_3(tipo_documento_cupon_2,
     
     num_documento_cupon_2 = str(num_documento_cupon_2).zfill(15)
     
-    con_concept = str(con_concept).zfill(15)
+    con_concept = str(con_concept).zfill(5)
     
     nom_concept = str(nom_concept).ljust(40,' ')
     
