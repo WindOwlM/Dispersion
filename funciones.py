@@ -74,7 +74,10 @@ def crear_linea_2(fecha_hora,
                   cantidad_total_registros,
                   valor_total_pagos,
                   cantidad_registros_abono_cuenta,
-                  valor_total_abono):
+                  valor_total_abono,
+                  cantidad_registros_pago_ventanilla,
+                  valor_total_pago_ventanilla,
+                  tipo_cuenta_dispersora):
     
     cantidad_total_registros=str(cantidad_total_registros).zfill(8)
     valor_total_pagos = str(valor_total_pagos).zfill(16)
@@ -82,9 +85,14 @@ def crear_linea_2(fecha_hora,
     cantidad_registros_abono_cuenta=str(cantidad_registros_abono_cuenta).zfill(8)
     valor_total_abono = str(valor_total_abono).zfill(16)
     valor_total_abono = f"{valor_total_abono}00"
+    cantidad_registros_pago_ventanilla=str(cantidad_registros_pago_ventanilla).zfill(8)
+    valor_total_pago_ventanilla = str(valor_total_pago_ventanilla).zfill(16)
+    valor_total_pago_ventanilla = f"{valor_total_pago_ventanilla}00"
+   
+
 
     
-    linea_completa = f"{fecha_hora}{cantidad_total_registros}{valor_total_pagos}{cantidad_registros_abono_cuenta}{valor_total_abono}"
+    linea_completa = f"{fecha_hora}{cantidad_total_registros}{valor_total_pagos}{cantidad_registros_abono_cuenta}{valor_total_abono}{cantidad_registros_pago_ventanilla}{valor_total_pago_ventanilla}{tipo_cuenta_dispersora}"
     
     return linea_completa
 
