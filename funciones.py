@@ -70,11 +70,11 @@ def crear_dispersion(tipo_documento,
     
     return linea_completa
 
-def crear_linea_2(fecha, hora):
+def crear_linea_2(fecha_hora):
     
-    fecha = fecha.strftime('%Y%m%d')
-    hora = hora
+
+  
     
-    linea_completa = f"{fecha}{hora}"
+    linea_completa = f"{fecha_hora}"
     
     return linea_completa
