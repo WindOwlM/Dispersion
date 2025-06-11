@@ -228,24 +228,27 @@ def Orden_no_pago(tipo_documento,
                   primer_nombre_onp,
                   segundo_nombre_onp,
                   periodo_nomina_onp,
+                  referencia_onp,
                   codigo_banco,
                   sucursal_banco,
                   cuenta_onp,
                   tipo_cuenta_onp,
                   Valor_neto_onp,
                   estado_pago,
-                  fecha_onp):
+                  fecha_onp,
+                  fecha_fallecimiento):
      
      num_documento_onp = str(num_documento_onp).zfill(15)
      primer_apellido_onp = str(primer_apellido_onp).ljust(15,' ')
      segundo_apellido_onp = str(segundo_apellido_onp).ljust(15,' ')
      primer_nombre_onp = str(primer_nombre_onp).ljust(15,' ')
      segundo_nombre_onp = str(segundo_nombre_onp).ljust(15,' ')
+     referencia_onp = str(referencia_onp).zfill(50)
      sucursal_banco = str(sucursal_banco).zfill(4)
      cuenta_onp = str(cuenta_onp).zfill(20)
      Valor_neto_onp = str(Valor_neto_onp).zfill(12)
      
 
-     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}."
+     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}."
      
      return linea_completa

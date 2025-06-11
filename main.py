@@ -355,7 +355,7 @@ with st.expander("Linea 1"):
     #dato 1
     tipo_documento = st.selectbox("Tipo de documento",["CC","CE","RC","TI","PA"])
 
-    #dato2
+    #dato 2
     num_documento_onp= st.text_input("Numero documento", max_chars=15)
     #dato 3
     primer_apellido_onp= st.text_input("Primer apellido", max_chars=15)
@@ -373,25 +373,32 @@ with st.expander("Linea 1"):
     periodo_nomina_onp= st.text_input("Periodo nomina en formato AAAAMM", max_chars=6)
 
     #dato 8
+    referencia_onp= st.text_input("Informacion remitida por Colpensiones", max_chars=50)
+ 
+    #dato 
     codigo_banco= st.text_input("Codigo del banco", max_chars=2)
 
-    #dato 9
+    #dato 
     sucursal_banco= st.text_input("Codigo de la sucursula del banco",max_chars=4)
 
-    #dato 10
+    #dato 
     cuenta_onp= st.text_input("Cuenta (Debe se 0 si el tipo de cuenta es ventanilla)",max_chars=20)
 
-    #dato 11
+    #dato 
     tipo_cuenta_onp = st.selectbox("Tipo de cuenta,CA:Cuenta de Ahorros, CP:Cuenta Pensión, CC:Cuenta Corriente, VE:Ventanilla",["CA","CP","CC","VE"])
 
-    #dato 12
+    #dato 
     Valor_neto_onp= st.text_input("Valor neto",max_chars=12)
 
-    #dato 13
+    #dato 
     estado_pago= st.text_input("Estado pago",max_chars=1)
     
-    #dato 14
+    #dato 
     fecha_onp = st.text_input("Fecha en la que se remite la ONP por parte de la entidad (AAAAMMDD)", max_chars=8)
+
+    #dato 
+    fecha_fallecimiento = st.text_input("Fecha en la que fallece el beneficiario del pago(AAAAMMDD)", max_chars=8)
+
 
     if st.button("Generar linea onp 1"):
         
@@ -402,13 +409,15 @@ with st.expander("Linea 1"):
                                                  primer_nombre_onp,
                                                  segundo_nombre_onp,
                                                  periodo_nomina_onp,
+                                                 referencia_onp,
                                                  codigo_banco,
                                                  sucursal_banco,
                                                  cuenta_onp,
                                                  tipo_cuenta_onp,
                                                  Valor_neto_onp,
                                                  estado_pago,
-                                                 fecha_onp)
+                                                 fecha_onp,
+                                                 fecha_fallecimiento)
         
         st.session_state.onp.append(linea_completa)
 
