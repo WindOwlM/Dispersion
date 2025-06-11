@@ -376,7 +376,23 @@ with st.expander("Linea 1"):
     codigo_banco= st.text_input("Codigo del banco", max_chars=2)
 
     #dato 9
+    sucursal_banco= st.text_input("Codigo de la sucursula del banco",max_chars=4)
+
+    #dato 10
+    cuenta_onp= st.text_input("Cuenta (Debe se 0 si el tipo de cuenta es ventanilla)",max_chars=20)
+
+    #dato 11
+    tipo_cuenta_onp = st.selectbox("Tipo de cuenta",["CA","CP","CC","VE"])
+
+    #dato 12
+    Valor_neto_onp= st.text_input("Valor neto",max_chars=12)
+
+    #dato 13
+    estado_pago= st.text_input("Estado pago",max_chars=1)
     
+    #dato 14
+    fecha_onp = st.date_input("Fecha orden no pago")
+
     if st.button("Generar linea onp 1"):
         
         linea_completa = funciones.Orden_no_pago(tipo_documento,
@@ -386,7 +402,13 @@ with st.expander("Linea 1"):
                                                  primer_nombre_onp,
                                                  segundo_nombre_onp,
                                                  periodo_nomina_onp,
-                                                 codigo_banco)
+                                                 codigo_banco,
+                                                 sucursal_banco,
+                                                 cuenta_onp,
+                                                 tipo_cuenta_onp,
+                                                 Valor_neto_onp,
+                                                 estado_pago,
+                                                 )
         
         st.session_state.onp.append(linea_completa)
 
