@@ -373,7 +373,7 @@ with st.expander("Linea 1"):
     periodo_nomina_onp= st.text_input("Periodo nomina en formato AAAAMM", max_chars=6)
 
     #dato 8
-    referencia_onp= st.text_input("Informacion remitida por Colpensiones", max_chars=50)
+    referencia_onp= st.text_input("Referencia (Informacion remitida por Colpensiones)", max_chars=50)
  
     #dato 
     codigo_banco= st.text_input("Codigo del banco", max_chars=2)
