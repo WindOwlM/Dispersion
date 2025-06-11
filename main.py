@@ -375,28 +375,28 @@ with st.expander("Linea 1"):
     #dato 8
     referencia_onp= st.text_input("Referencia (Informacion remitida por Colpensiones)", max_chars=50)
  
-    #dato 
+    #dato 9
     codigo_banco= st.text_input("Codigo del banco", max_chars=2)
 
-    #dato 
+    #dato 10
     sucursal_banco= st.text_input("Codigo de la sucursula del banco",max_chars=4)
 
-    #dato 
+    #dato 11
     cuenta_onp= st.text_input("Cuenta (Debe se 0 si el tipo de cuenta es ventanilla)",max_chars=20)
 
-    #dato 
+    #dato 12
     tipo_cuenta_onp = st.selectbox("Tipo de cuenta,CA:Cuenta de Ahorros, CP:Cuenta Pensión, CC:Cuenta Corriente, VE:Ventanilla",["CA","CP","CC","VE"])
 
-    #dato 
+    #dato 13
     Valor_neto_onp= st.text_input("Valor neto",max_chars=12)
 
-    #dato 
+    #dato 14
     estado_pago= st.text_input("Estado pago",max_chars=1)
     
-    #dato 
+    #dato 15
     fecha_onp = st.text_input("Fecha en la que se remite la ONP por parte de la entidad (AAAAMMDD)", max_chars=8)
 
-    #dato 
+    #dato 16
     fecha_fallecimiento = st.text_input("Fecha en la que fallece el beneficiario del pago(AAAAMMDD)", max_chars=8)
 
 
