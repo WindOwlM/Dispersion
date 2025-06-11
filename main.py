@@ -382,7 +382,7 @@ with st.expander("Linea 1"):
     cuenta_onp= st.text_input("Cuenta (Debe se 0 si el tipo de cuenta es ventanilla)",max_chars=20)
 
     #dato 11
-    tipo_cuenta_onp = st.selectbox("Tipo de cuenta",["CA","CP","CC","VE"])
+    tipo_cuenta_onp = st.selectbox("Tipo de cuenta,CA:Cuenta de Ahorros, CP:Cuenta Pensión, CC:Cuenta Corriente, VE:Ventanilla",["CA","CP","CC","VE"])
 
     #dato 12
     Valor_neto_onp= st.text_input("Valor neto",max_chars=12)
