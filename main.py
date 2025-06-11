@@ -402,6 +402,25 @@ with st.expander("Linea 1"):
     #dato 17
     descripcion_causal_np = st.text_input("Descripcion Causal No pago", max_chars=150)
 
+    #dato 18    
+    respuesta_banco = st.text_input("Respuesta banco 0= Reintegrado Total, 1= Pagado, 2= Reintegro Parcial", max_chars=1)
+
+    #dato 19
+    valor_reintegro = st.text_input("Valor que la entidad reintegra", max_chars=12)
+
+    #dato 20
+    desc_causal_np_banco = st.text_input("Descripcion causal No pago del Banco", max_chars=150)
+
+    #dato 21
+    causal_np_banco = st.text_input("Causal No pago del Banco", max_chars=4)
+
+    #dato 22
+    fecha_pago_reintegro = st.text_input("Fecha de pago o reintegro Banco(AAAAMMDD)", max_chars=8)
+
+    #dato 23
+    hora_pago = st.text_input("Hora en que el banco efectua el pago (HHMMSS)", max_chars=5)
+
+
 
     if st.button("Generar linea onp 1"):
         
@@ -421,7 +440,13 @@ with st.expander("Linea 1"):
                                                  estado_pago,
                                                  fecha_onp,
                                                  fecha_fallecimiento,
-                                                 descripcion_causal_np)
+                                                 descripcion_causal_np,
+                                                 respuesta_banco,
+                                                 valor_reintegro,
+                                                 desc_causal_np_banco,
+                                                 causal_np_banco,
+                                                 fecha_pago_reintegro,
+                                                 hora_pago)
         
         st.session_state.onp.append(linea_completa)
 

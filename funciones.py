@@ -237,7 +237,13 @@ def Orden_no_pago(tipo_documento,
                   estado_pago,
                   fecha_onp,
                   fecha_fallecimiento,
-                  descripcion_causal_np):
+                  descripcion_causal_np,
+                  respuesta_banco,
+                  valor_reintegro,
+                  desc_causal_np_banco,
+                  causal_np_banco,
+                  fecha_pago_reintegro,
+                  hora_pago):
      
      num_documento_onp = str(num_documento_onp).zfill(15)
      primer_apellido_onp = str(primer_apellido_onp).ljust(15,' ')
@@ -249,9 +255,15 @@ def Orden_no_pago(tipo_documento,
      cuenta_onp = str(cuenta_onp).zfill(20)
      Valor_neto_onp = str(Valor_neto_onp).zfill(12)
      descripcion_causal_np = str(descripcion_causal_np).ljust(150,' ')
+     respuesta_banco = str(respuesta_banco).ljust(1,' ')
+     valor_reintegro = str(valor_reintegro).ljust(12,' ')
+     desc_causal_np_banco = str(desc_causal_np_banco).ljust(150,' ')
+     causal_np_banco = str(causal_np_banco).ljust(4,' ')
+     fecha_pago_reintegro = str(fecha_pago_reintegro).ljust(8,' ')
+     hora_pago = str(hora_pago).ljust(5,' ')
      
 
-     linea_completa = f"{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}{descripcion_causal_np}."
+     linea_completa = f"{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}{descripcion_causal_np}{respuesta_banco}{valor_reintegro}{desc_causal_np_banco}{causal_np_banco}{fecha_pago_reintegro}{hora_pago}."
      
      return linea_completa
 
