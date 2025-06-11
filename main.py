@@ -408,7 +408,7 @@ with st.expander("Linea 1"):
                                                  tipo_cuenta_onp,
                                                  Valor_neto_onp,
                                                  estado_pago,
-                                                 )
+                                                 fecha_onp)
         
         st.session_state.onp.append(linea_completa)
 
