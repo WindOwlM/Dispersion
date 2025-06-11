@@ -288,14 +288,12 @@ def Orden_no_pago2(nit_entidad_originadora,
 
 #De aqui para abajo es preapertura
 
-def preapertura(tipo_documento,
+def preapertura(tipo_documento_preapertura,
                    ):
      
      
-     
 
-     
 
-     linea_completa = f"{tipo_documento}."
+     linea_completa = f"{tipo_documento_preapertura}."
      
      return linea_completa

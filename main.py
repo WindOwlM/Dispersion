@@ -496,15 +496,11 @@ st.title("Preapertura")
 with st.expander("Linea 1"):
     
     #dato 1
-    tipo_documento = st.selectbox("Tipo de documento",["CC","CE","RC","TI","PA"])
-
-   
-
-
+    tipo_documento_preapertura = st.selectbox("Tipo de documento",["CC","CE","RC","TI","PA"])
 
     if st.button("Generar linea 1 prepaertura "):
         
-        linea_completa = funciones.preapertura(tipo_documento,
+        linea_completa = funciones.preapertura(tipo_documento_preapertura,
                                                  )
         
         st.session_state.preapertura.append(linea_completa)
