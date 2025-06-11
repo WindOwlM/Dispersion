@@ -435,11 +435,28 @@ with st.expander("Linea 2"):
     #dato 1
     nit_entidad_originadora = st.text_input("Nit entidad originadora", max_chars=12)
 
+    #dato 2
+    num_registros_total = st.text_input("Numero de registros total", max_chars=8)
+
+    #dato 3
+    valor_total = st.text_input("Valor total", max_chars=18)
+
+    #dato 4
+    fecha_generacion = st.text_input("Fecha de generacion (AAAAMMDD)", max_chars=8)
+
+    #dato 5
+    hora_generacion = st.text_input("Hora de generacion (HHMMSS)", max_chars=6)
+
+
 
 
     if st.button("Generar linea onp 2"):
         
-        linea_completa = funciones.Orden_no_pago2(nit_entidad_originadora)
+        linea_completa = funciones.Orden_no_pago2(nit_entidad_originadora,
+                                                  num_registros_total,
+                                                  valor_total,
+                                                  fecha_generacion,
+                                                  hora_generacion)
         
         st.session_state.onp.append(linea_completa)
 

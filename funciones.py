@@ -255,12 +255,19 @@ def Orden_no_pago(tipo_documento,
      
      return linea_completa
 
-def Orden_no_pago2(nit_entidad_originadora):
+def Orden_no_pago2(nit_entidad_originadora,
+                   num_registros_total,
+                   valor_total,
+                   fecha_generacion,
+                   hora_generacion):
      
      nit_entidad_originadora = str(nit_entidad_originadora).zfill(12)
+     num_registros_total = str(num_registros_total).zfill(8)
+     valor_total = str(valor_total).zfill(16)
+     valor_total = f"{valor_total}00"
 
      
 
-     linea_completa = f"{nit_entidad_originadora}."
+     linea_completa = f"{nit_entidad_originadora}{num_registros_total}{valor_total}{fecha_generacion}{hora_generacion}."
      
      return linea_completa
