@@ -254,6 +254,7 @@ def Orden_no_pago(tipo_documento,
      sucursal_banco = str(sucursal_banco).zfill(4)
      cuenta_onp = str(cuenta_onp).zfill(20)
      Valor_neto_onp = str(Valor_neto_onp).zfill(12)
+     fecha_fallecimiento = str(fecha_fallecimiento).zfill(8)
      descripcion_causal_np = str(descripcion_causal_np).ljust(150,' ')
      respuesta_banco = str(respuesta_banco).ljust(1,' ')
      valor_reintegro = str(valor_reintegro).ljust(12,' ')
