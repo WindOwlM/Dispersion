@@ -428,3 +428,21 @@ with st.expander("Linea 1"):
 st.write("📋Resultado:")
 for i, linea in enumerate(st.session_state.onp, 1):
     st.text(f"{linea}")
+
+
+with st.expander("Linea 2"):
+    
+    #dato 1
+    nit_entidad_originadora = st.text_input("Nit entidad originadora", max_chars=12)
+
+
+
+    if st.button("Generar linea onp 2"):
+        
+        linea_completa = funciones.Orden_no_pago2(nit_entidad_originadora)
+        
+        st.session_state.onp.append(linea_completa)
+
+st.write("📋Resultado:")
+for i, linea in enumerate(st.session_state.onp, 1):
+    st.text(f"{linea}")
