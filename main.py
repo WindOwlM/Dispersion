@@ -399,6 +399,9 @@ with st.expander("Linea 1"):
     #dato 16
     fecha_fallecimiento = st.text_input("Fecha en la que fallece el beneficiario del pago(AAAAMMDD)", max_chars=8)
 
+    #dato 17
+    descripcion_causal_np = st.text_input("Descripcion Causal No pago", max_chars=150)
+
 
     if st.button("Generar linea onp 1"):
         
@@ -417,7 +420,8 @@ with st.expander("Linea 1"):
                                                  Valor_neto_onp,
                                                  estado_pago,
                                                  fecha_onp,
-                                                 fecha_fallecimiento)
+                                                 fecha_fallecimiento,
+                                                 descripcion_causal_np)
         
         st.session_state.onp.append(linea_completa)
 

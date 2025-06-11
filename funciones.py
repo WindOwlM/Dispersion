@@ -236,7 +236,8 @@ def Orden_no_pago(tipo_documento,
                   Valor_neto_onp,
                   estado_pago,
                   fecha_onp,
-                  fecha_fallecimiento):
+                  fecha_fallecimiento,
+                  descripcion_causal_np):
      
      num_documento_onp = str(num_documento_onp).zfill(15)
      primer_apellido_onp = str(primer_apellido_onp).ljust(15,' ')
@@ -247,8 +248,9 @@ def Orden_no_pago(tipo_documento,
      sucursal_banco = str(sucursal_banco).zfill(4)
      cuenta_onp = str(cuenta_onp).zfill(20)
      Valor_neto_onp = str(Valor_neto_onp).zfill(12)
+     descripcion_causal_np = str(descripcion_causal_np).ljust(150,' ')
      
 
-     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}."
+     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}{descripcion_causal_np}."
      
      return linea_completa
