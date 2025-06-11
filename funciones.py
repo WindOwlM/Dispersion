@@ -251,7 +251,7 @@ def Orden_no_pago(tipo_documento,
      descripcion_causal_np = str(descripcion_causal_np).ljust(150,' ')
      
 
-     linea_completa = f"0{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}{descripcion_causal_np}."
+     linea_completa = f"{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_onp}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}{descripcion_causal_np}."
      
      return linea_completa
 
@@ -261,6 +261,6 @@ def Orden_no_pago2(nit_entidad_originadora):
 
      
 
-     linea_completa = f"0{nit_entidad_originadora}."
+     linea_completa = f"{nit_entidad_originadora}."
      
      return linea_completa
