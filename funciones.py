@@ -289,11 +289,15 @@ def Orden_no_pago2(nit_entidad_originadora,
 #De aqui para abajo es preapertura
 
 def preapertura(tipo_documento_preapertura,
-                   ):
+                num_documento_prepaertura,
+                primer_apellido_prepaertura,
+                segundo_apellido_prepaertura):
      
-     
+     num_documento_prepaertura = str(num_documento_prepaertura).zfill(15)
+     primer_apellido_prepaertura = str(primer_apellido_prepaertura).ljust(15,' ')
+     segundo_apellido_prepaertura = str(segundo_apellido_prepaertura).ljust(15,' ')
 
 
-     linea_completa = f"{tipo_documento_preapertura}."
+     linea_completa = f"{tipo_documento_preapertura}{num_documento_prepaertura}{primer_apellido_prepaertura}{segundo_apellido_prepaertura}."
      
      return linea_completa

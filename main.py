@@ -498,10 +498,21 @@ with st.expander("Linea 1"):
     #dato 1
     tipo_documento_preapertura = st.selectbox("Tipo de documento preapertura",["CC","CE","RC","TI","PA"])
 
+    #dato 2
+    num_documento_prepaertura = st.text_input("Numero de documento", max_chars=15)
+
+    #dato 5 (Sale asi en la tabla compartida por julian)
+    primer_apellido_prepaertura = st.text_input("Primer apellido del pensionado", max_chars=15)
+
+    #dato 6 (Sale asi en la tabla compartida por julian)
+    segundo_apellido_prepaertura = st.text_input("Segundo apellido del pensionado", max_chars=15)
+
     if st.button("Generar linea 1 prepaertura "):
         
         linea_completa = funciones.preapertura(tipo_documento_preapertura,
-                                                 )
+                                               num_documento_prepaertura,
+                                               primer_apellido_prepaertura,
+                                               segundo_apellido_prepaertura)
         
         st.session_state.preapertura.append(linea_completa)
 
