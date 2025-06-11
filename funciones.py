@@ -284,3 +284,18 @@ def Orden_no_pago2(nit_entidad_originadora,
      linea_completa = f"{nit_entidad_originadora}{num_registros_total}{valor_total}{fecha_generacion}{hora_generacion}."
      
      return linea_completa
+
+
+#De aqui para abajo es preapertura
+
+def preapertura(tipo_documento,
+                   ):
+     
+     
+     
+
+     
+
+     linea_completa = f"{tipo_documento}."
+     
+     return linea_completa

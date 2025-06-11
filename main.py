@@ -9,6 +9,7 @@ if "lineas" not in st.session_state:
     st.session_state.lineas = []
     st.session_state.cupones = []
     st.session_state.onp = []
+    st.session_state.preapertura = []
 
 with st.expander("Linea 1"):
 
@@ -487,4 +488,27 @@ with st.expander("Linea 2"):
 
 st.write("📋Resultado:")
 for i, linea in enumerate(st.session_state.onp, 1):
+    st.text(f"{linea}")
+
+#De aqui para abajo es Preapertura
+st.title("Preapertura")
+
+with st.expander("Linea 1"):
+    
+    #dato 1
+    tipo_documento = st.selectbox("Tipo de documento",["CC","CE","RC","TI","PA"])
+
+   
+
+
+
+    if st.button("Generar linea 1 prepaertura "):
+        
+        linea_completa = funciones.preapertura(tipo_documento,
+                                                 )
+        
+        st.session_state.preapertura.append(linea_completa)
+
+st.write("📋Resultado:")
+for i, linea in enumerate(st.session_state.preapertura, 1):
     st.text(f"{linea}")
