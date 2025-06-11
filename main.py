@@ -391,7 +391,7 @@ with st.expander("Linea 1"):
     estado_pago= st.text_input("Estado pago",max_chars=1)
     
     #dato 14
-    fecha_onp = st.date_input("Fecha orden no pago")
+    fecha_onp = st.text_input("Fecha en la que se remite la ONP por parte de la entidad (AAAAMMDD)", max_chars=8)
 
     if st.button("Generar linea onp 1"):
         
