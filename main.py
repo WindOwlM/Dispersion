@@ -403,7 +403,7 @@ with st.expander("Linea 1"):
     descripcion_causal_np = st.text_input("Descripcion Causal No pago", max_chars=150)
 
     #dato 18    
-    respuesta_banco = st.text_input("Respuesta banco 0= Reintegrado Total, 1= Pagado, 2= Reintegro Parcial", max_chars=0)
+    respuesta_banco = st.text_input("Respuesta banco 0= Reintegrado Total, 1= Pagado, 2= Reintegro Parcial", max_chars=1)
 
     #dato 19
     valor_reintegro = st.text_input("Valor que la entidad reintegra", max_chars=12)
