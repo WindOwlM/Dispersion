@@ -599,7 +599,7 @@ with st.expander("Registro control (linea 2)"):
     nit_entidad_originadora_preapertura = st.text_input("Nit entidad originadora", max_chars=12)
 
     #dato 2
-    num_registros_total = st.text_input("Nit entidad originadora", max_chars=8)
+    num_registros_total = st.text_input("Numero registros total", max_chars=8)
 
     #dato 3
     valor_total_preapertura = st.text_input("Valor total", max_chars=18)
