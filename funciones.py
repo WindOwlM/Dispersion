@@ -332,3 +332,20 @@ def preapertura(tipo_documento_preapertura,
      linea_completa = f"{tipo_documento_preapertura}{num_documento_prepaertura}{primer_apellido_prepaertura}{segundo_apellido_prepaertura}{primer_nombre_prepaertura}{segunda_nombre_prepaertura}{Genero}{fecha_nacimiento}{direccion_pensionado}{telefono_pensionado}{celular_pensionado}{codigo_dep_dane}{nombre_dep}{cod_ciudad_municipio_dane}{nom_ciudad_municipio_dane}{nit_pagador}{fecha_ingreso}{valor_mesada_pensional}{Tipo_excencion_gmf}{cod_sucursal}{num_cuenta_preaperturada}{tipo_cuenta_respbanco}."
      
      return linea_completa
+
+
+def preapertura2(nit_entidad_originadora_preapertura,
+                 num_registros_total,
+                 valor_total_preapertura,
+                 fecha_generacion_linea2,
+                 hora_generacion_linea2):
+     
+     nit_entidad_originadora_preapertura = str(nit_entidad_originadora_preapertura).zfill(12)
+     num_registros_total = str(num_registros_total).zfill(8)
+     valor_total_preapertura = str(valor_total_preapertura).zfill(16)
+     valor_total_preapertura = f"{valor_total_preapertura}00"
+  
+
+     linea_completa = f"{nit_entidad_originadora_preapertura}{num_registros_total}{valor_total_preapertura}{fecha_generacion_linea2}{hora_generacion_linea2}"
+     
+     return linea_completa

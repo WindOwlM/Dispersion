@@ -561,9 +561,6 @@ with st.expander("Linea 1"):
     #dato 24 (Sale asi en la tabla compartida por julian)
     tipo_cuenta_respbanco = st.text_input("Tipo de cuenta", max_chars=2, disabled=True)
 
-    
-
-
 
     if st.button("Generar linea 1 prepaertura "):
         
@@ -589,6 +586,38 @@ with st.expander("Linea 1"):
                                                cod_sucursal,
                                                num_cuenta_preaperturada,
                                                tipo_cuenta_respbanco)
+        
+        st.session_state.preapertura.append(linea_completa)
+
+st.write("📋Resultado:")
+for i, linea in enumerate(st.session_state.preapertura, 1):
+    st.text(f"{linea}")
+
+with st.expander("Registro control (linea 2)"):
+    
+    #dato 1
+    nit_entidad_originadora_preapertura = st.text_input("Nit entidad originadora", max_chars=12)
+
+    #dato 2
+    num_registros_total = st.text_input("Nit entidad originadora", max_chars=8)
+
+    #dato 3
+    valor_total_preapertura = st.text_input("Valor total", max_chars=18)
+
+    #dato 4
+    fecha_generacion_linea2 = st.text_input("Fecha generacion (AAAAMMDD)", max_chars=8)
+
+    #dato 5
+    hora_generacion_linea2= st.text_input("Hora generacion ( HHMMSS HH es la hora, MM es minuto y SS es segundo)", max_chars=6)
+
+
+    if st.button("Generar linea 2 prepaertura "):
+        
+        linea_completa = funciones.preapertura2(nit_entidad_originadora_preapertura,
+                                              num_registros_total,
+                                              valor_total_preapertura,
+                                              fecha_generacion_linea2,
+                                              hora_generacion_linea2)
         
         st.session_state.preapertura.append(linea_completa)
 
