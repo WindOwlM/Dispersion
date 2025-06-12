@@ -517,7 +517,7 @@ with st.expander("Linea 1"):
     Genero = st.selectbox("Genero: Masculino (M), Femenino (F)",["M","F"])
 
     #dato 10 (Sale asi en la tabla compartida por julian)
-    fecha_nacimiento = st.text_input("Fecha nacimiento", max_chars=8)
+    fecha_nacimiento = st.text_input("Fecha nacimiento (AAAAMMDD)", max_chars=8)
     
     #dato 11 (Sale asi en la tabla compartida por julian)
     direccion_pensionado = st.text_input("Dirreccion de residencia del pensionado", max_chars=45)
