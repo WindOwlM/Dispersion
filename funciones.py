@@ -291,13 +291,34 @@ def Orden_no_pago2(nit_entidad_originadora,
 def preapertura(tipo_documento_preapertura,
                 num_documento_prepaertura,
                 primer_apellido_prepaertura,
-                segundo_apellido_prepaertura):
+                segundo_apellido_prepaertura,
+                primer_nombre_prepaertura,
+                segunda_nombre_prepaertura,
+                Genero,
+                fecha_nacimiento,
+                direccion_pensionado,
+                telefono_pensionado,
+                celular_pensionado,
+                codigo_dep_dane,
+                nombre_dep,
+                cod_ciudad_municipio_dane,
+                nom_ciudad_municipio_dane,
+                nit_pagador):
      
      num_documento_prepaertura = str(num_documento_prepaertura).zfill(15)
      primer_apellido_prepaertura = str(primer_apellido_prepaertura).ljust(15,' ')
      segundo_apellido_prepaertura = str(segundo_apellido_prepaertura).ljust(15,' ')
+     primer_nombre_prepaertura = str(primer_nombre_prepaertura).ljust(15,' ')
+     segunda_nombre_prepaertura = str(segunda_nombre_prepaertura).ljust(15,' ')
+     direccion_pensionado = str(direccion_pensionado).ljust(45,' ')
+     telefono_pensionado = str(telefono_pensionado).zfill(7)
+     celular_pensionado = str(celular_pensionado).zfill(10)
+     codigo_dep_dane = str(codigo_dep_dane).zfill(2)
+     nombre_dep = str(nombre_dep).ljust(50,' ')
+     cod_ciudad_municipio_dane = str(cod_ciudad_municipio_dane).zfill(3)
+     nom_ciudad_municipio_dane = str(nom_ciudad_municipio_dane).ljust(50,' ')
+     nit_pagador= str(nit_pagador).zfill(9)
 
-
-     linea_completa = f"{tipo_documento_preapertura}{num_documento_prepaertura}{primer_apellido_prepaertura}{segundo_apellido_prepaertura}."
+     linea_completa = f"{tipo_documento_preapertura}{num_documento_prepaertura}{primer_apellido_prepaertura}{segundo_apellido_prepaertura}{primer_nombre_prepaertura}{segunda_nombre_prepaertura}{Genero}{fecha_nacimiento}{direccion_pensionado}{telefono_pensionado}{celular_pensionado}{codigo_dep_dane}{nombre_dep}{cod_ciudad_municipio_dane}{nom_ciudad_municipio_dane}{nit_pagador}."
      
      return linea_completa

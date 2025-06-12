@@ -507,12 +507,62 @@ with st.expander("Linea 1"):
     #dato 6 (Sale asi en la tabla compartida por julian)
     segundo_apellido_prepaertura = st.text_input("Segundo apellido del pensionado", max_chars=15)
 
+    #dato 7 (Sale asi en la tabla compartida por julian)
+    primer_nombre_prepaertura = st.text_input("Primer nombre del pensionado", max_chars=15)
+
+    #dato 8 (Sale asi en la tabla compartida por julian)
+    segunda_nombre_prepaertura = st.text_input("Segundo nombre del pensionado", max_chars=15)
+
+    #dato 9 (Sale asi en la tabla compartida por julian)
+    Genero = st.selectbox("Genero: Masculino (M), Femenino (F)",["M","F"])
+
+    #dato 10 (Sale asi en la tabla compartida por julian)
+    fecha_nacimiento = st.text_input("Fecha nacimiento", max_chars=8)
+    
+    #dato 11 (Sale asi en la tabla compartida por julian)
+    direccion_pensionado = st.text_input("Dirreccion de residencia del pensionado", max_chars=45)
+
+    #dato 12 (Sale asi en la tabla compartida por julian)
+    telefono_pensionado = st.text_input("Numero de telefono del pensionado", max_chars=7)
+
+    #dato 13 (Sale asi en la tabla compartida por julian)
+    celular_pensionado = st.text_input("Numero de celular del pensionado", max_chars=10)
+
+    #dato 14 (Sale asi en la tabla compartida por julian)
+    codigo_dep_dane = st.text_input("Código Departamento-Dane", max_chars=2)
+
+    #dato 15 (Sale asi en la tabla compartida por julian)
+    nombre_dep = st.text_input("Nombre Departamento", max_chars=50)
+
+    #dato 16 (Sale asi en la tabla compartida por julian)
+    cod_ciudad_municipio_dane = st.text_input("Código Ciudad/Municipio-Dane", max_chars=3)
+    
+    #dato 17 (Sale asi en la tabla compartida por julian)
+    nom_ciudad_municipio_dane = st.text_input("Nombre Ciudad/Municipio", max_chars=50)
+
+    #dato 18 (Sale asi en la tabla compartida por julian)
+    nit_pagador = st.text_input("Nit del pagador. Sin digito de verificación", max_chars=9)
+    
+
+
     if st.button("Generar linea 1 prepaertura "):
         
         linea_completa = funciones.preapertura(tipo_documento_preapertura,
                                                num_documento_prepaertura,
                                                primer_apellido_prepaertura,
-                                               segundo_apellido_prepaertura)
+                                               segundo_apellido_prepaertura,
+                                               primer_nombre_prepaertura,
+                                               segunda_nombre_prepaertura,
+                                               Genero,
+                                               fecha_nacimiento,
+                                               direccion_pensionado,
+                                               telefono_pensionado,
+                                               celular_pensionado,
+                                               codigo_dep_dane,
+                                               nombre_dep,
+                                               cod_ciudad_municipio_dane,
+                                               nom_ciudad_municipio_dane,
+                                               nit_pagador)
         
         st.session_state.preapertura.append(linea_completa)
 
