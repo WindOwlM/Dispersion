@@ -602,7 +602,7 @@ with st.expander("Registro control (linea 2)"):
     num_registros_total = st.text_input("Numero registros total", max_chars=8)
 
     #dato 3
-    valor_total_preapertura = st.text_input("Valor total", max_chars=18)
+    valor_total_preapertura = st.text_input("Valor total:", max_chars=18)
 
     #dato 4
     fecha_generacion_linea2 = st.text_input("Fecha generacion (AAAAMMDD)", max_chars=8)
