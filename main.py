@@ -558,6 +558,9 @@ with st.expander("Linea 1"):
     #dato 23 (Sale asi en la tabla compartida por julian)
     num_cuenta_preaperturada = st.text_input("Número de  Cuenta preaperturada Banco", max_chars=12, disabled=True)
 
+    #dato 24 (Sale asi en la tabla compartida por julian)
+    tipo_cuenta_respbanco = st.text_input("Tipo de cuenta", max_chars=2, disabled=True)
+
     
 
 
@@ -584,7 +587,8 @@ with st.expander("Linea 1"):
                                                valor_mesada_pensional,
                                                Tipo_excencion_gmf,
                                                cod_sucursal,
-                                               num_cuenta_preaperturada)
+                                               num_cuenta_preaperturada,
+                                               tipo_cuenta_respbanco)
         
         st.session_state.preapertura.append(linea_completa)
 
