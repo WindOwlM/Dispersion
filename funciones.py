@@ -303,7 +303,12 @@ def preapertura(tipo_documento_preapertura,
                 nombre_dep,
                 cod_ciudad_municipio_dane,
                 nom_ciudad_municipio_dane,
-                nit_pagador):
+                nit_pagador,
+                fecha_ingreso,
+                valor_mesada_pensional,
+                Tipo_excencion_gmf,
+                cod_sucursal,
+                num_cuenta_preaperturada):
      
      num_documento_prepaertura = str(num_documento_prepaertura).zfill(15)
      primer_apellido_prepaertura = str(primer_apellido_prepaertura).ljust(15,' ')
@@ -318,7 +323,9 @@ def preapertura(tipo_documento_preapertura,
      cod_ciudad_municipio_dane = str(cod_ciudad_municipio_dane).zfill(3)
      nom_ciudad_municipio_dane = str(nom_ciudad_municipio_dane).ljust(50,' ')
      nit_pagador= str(nit_pagador).zfill(9)
+     valor_mesada_pensional= str(valor_mesada_pensional).zfill(12)
+     cod_sucursal= str(cod_sucursal).zfill(4)
 
-     linea_completa = f"{tipo_documento_preapertura}{num_documento_prepaertura}{primer_apellido_prepaertura}{segundo_apellido_prepaertura}{primer_nombre_prepaertura}{segunda_nombre_prepaertura}{Genero}{fecha_nacimiento}{direccion_pensionado}{telefono_pensionado}{celular_pensionado}{codigo_dep_dane}{nombre_dep}{cod_ciudad_municipio_dane}{nom_ciudad_municipio_dane}{nit_pagador}."
+     linea_completa = f"{tipo_documento_preapertura}{num_documento_prepaertura}{primer_apellido_prepaertura}{segundo_apellido_prepaertura}{primer_nombre_prepaertura}{segunda_nombre_prepaertura}{Genero}{fecha_nacimiento}{direccion_pensionado}{telefono_pensionado}{celular_pensionado}{codigo_dep_dane}{nombre_dep}{cod_ciudad_municipio_dane}{nom_ciudad_municipio_dane}{nit_pagador}{fecha_ingreso}{valor_mesada_pensional}{Tipo_excencion_gmf}{cod_sucursal}{num_cuenta_preaperturada}."
      
      return linea_completa

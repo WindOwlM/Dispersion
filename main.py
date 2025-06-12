@@ -542,7 +542,24 @@ with st.expander("Linea 1"):
 
     #dato 18 (Sale asi en la tabla compartida por julian)
     nit_pagador = st.text_input("Nit del pagador. Sin digito de verificación", max_chars=9)
+
+    #dato 19 (Sale asi en la tabla compartida por julian)
+    fecha_ingreso = st.text_input("Fecha ingreso (AAAAMMDD)", max_chars=8)
+
+    #dato 20 (Sale asi en la tabla compartida por julian)
+    valor_mesada_pensional = st.text_input("Valor mesada pensional", max_chars=12)
+
+    #dato 21 (Sale asi en la tabla compartida por julian)
+    Tipo_excencion_gmf = st.selectbox("Tipo de Execion GMF: E = Exentas",["E"])
+
+    #dato 22 (Sale asi en la tabla compartida por julian)
+    cod_sucursal = st.text_input("Código Sucursal", max_chars=4)
+
+    #dato 23 (Sale asi en la tabla compartida por julian)
+    num_cuenta_preaperturada = st.text_input("Número de  Cuenta preaperturada Banco", max_chars=12, disabled=True)
+
     
+
 
 
     if st.button("Generar linea 1 prepaertura "):
@@ -562,7 +579,12 @@ with st.expander("Linea 1"):
                                                nombre_dep,
                                                cod_ciudad_municipio_dane,
                                                nom_ciudad_municipio_dane,
-                                               nit_pagador)
+                                               nit_pagador,
+                                               fecha_ingreso,
+                                               valor_mesada_pensional,
+                                               Tipo_excencion_gmf,
+                                               cod_sucursal,
+                                               num_cuenta_preaperturada)
         
         st.session_state.preapertura.append(linea_completa)
 
