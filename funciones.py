@@ -55,9 +55,9 @@ def crear_dispersion(tipo_documento,
     
     fecha_apli_pag = fecha_apli_pag.strftime('%Y%m%d')
     
-    tipo_documento_repre = tipo_documento_repre
+    tipo_documento_repre = str(tipo_documento_repre).ljust(2,' ')
     
-    documento_repre = str(documento_repre).zfill(15)
+    documento_repre = str(documento_repre).ljust(15,' ')
     
     primer_apellido_repre = str(primer_apellido_repre).ljust(15,' ')
     segundo_apellido_repre = str(segundo_apellido_repre).ljust(15,' ')

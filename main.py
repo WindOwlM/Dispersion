@@ -70,22 +70,22 @@ with st.expander("Linea 1"):
     fecha_apli_pag = st.date_input("Fecha Aplicación Pago", min_value=min_value)
 
     #dato 18
-    tipo_documento_repre = st.selectbox("Tipo de documento del representante legal",["CC","TI","CE","RC","PA"])
+    tipo_documento_repre = st.text_input("Tipo de documento del representante legal",disabled=True)
 
     #dato 19
-    documento_repre = st.text_input("Numero de documento del representante legal")
+    documento_repre = st.text_input("Numero de documento del representante legal", disabled=True)
 
     #dato 20
-    primer_apellido_repre = st.text_input("Primer apellido del representante legal")
+    primer_apellido_repre = st.text_input("Primer apellido del representante legal", disabled=True)
 
     #dato 21
-    segundo_apellido_repre = st.text_input("Segundo apellido del representante legal")
+    segundo_apellido_repre = st.text_input("Segundo apellido del representante legal", disabled=True)
         
     #dato 22
-    primer_nombre_repre = st.text_input("Primer nombre del representante legal")
+    primer_nombre_repre = st.text_input("Primer nombre del representante legal", disabled=True)
         
     #dato 23
-    segundo_nombre_repre = st.text_input("Segundo nombre del representante legal")
+    segundo_nombre_repre = st.text_input("Segundo nombre del representante legal", disabled=True)
     
     #FIN FORM    
 
