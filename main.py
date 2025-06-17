@@ -58,7 +58,7 @@ with st.expander("Linea 1"):
     valor_neto = st.text_input("Valor neto")
 
     #dato 14
-    tipo_documento_ant = st.selectbox("Tipo de documento anterior",["CC","TI","CE","RC","PA"],disabled=True)
+    tipo_documento_ant = st.text_input("Tipo de documento anterior",disabled=True)
 
     #dato 15
     documento_ant = st.text_input("Numero de documento anterior", disabled=True) 
