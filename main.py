@@ -61,7 +61,7 @@ with st.expander("Linea 1"):
     tipo_documento_ant = st.selectbox("Tipo de documento anterior",["CC","TI","CE","RC","PA"],disabled=True)
 
     #dato 15
-    documento_ant = st.text_input("Numero de documento anterior") 
+    documento_ant = st.text_input("Numero de documento anterior", disabled=True) 
 
     #dato 16
     fecha_gen_mageti = st.date_input("Fecha Generación del Magnético", min_value=min_value)
