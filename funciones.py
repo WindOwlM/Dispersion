@@ -48,9 +48,8 @@ def crear_dispersion(tipo_documento,
     valor_neto = str(valor_neto).zfill(10)
     valor_neto = f"{valor_neto}00"
     
-    tipo_documento_ant = tipo_documento_ant
+    tipo_documento_ant = str(tipo_documento_ant).ljust(2,' ')
     
-    documento_ant = str(documento_ant).zfill(15)
     
     fecha_gen_mageti = fecha_gen_mageti.strftime('%Y%m%d')
     
