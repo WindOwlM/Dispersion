@@ -46,7 +46,7 @@ with st.expander("Linea 1"):
     ref_num_doc = st.text_input("Numero documento referencia", max_chars=12)
 
     #dato 3 de referencia
-    ref_fech = st.date_input("Fecha referencia(AAAAMMDD)", max_chars=8, min_value=min_value)
+    ref_fech = st.date_input("Fecha referencia(AAAAMMDD)",  min_value=min_value)
 
     #dato 4 de referencia
     ref_id_pension = st.text_input("Id de la pension referencia", max_chars=8)
@@ -55,7 +55,7 @@ with st.expander("Linea 1"):
     ref_espacios_blanco = st.text_input("12 espacios en blanco", disabled=True)
 
     #dato 6 de referencia
-    ref_fech2 = st.date_input("Fecha referencia 2(AAAAMMDD)", max_chars=8, min_value=min_value)
+    ref_fech2 = st.date_input("Fecha referencia 2(AAAAMMDD)",  min_value=min_value)
 
     #dato 9
     banco = st.text_input("Codigo de banco (2 digitos max)", max_chars=2)
