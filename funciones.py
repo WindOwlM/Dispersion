@@ -42,9 +42,13 @@ def crear_dispersion(tipo_documento,
     
     ref_num_doc = str(ref_num_doc).zfill(12)
 
+    ref_fech = ref_fech.strftime('%Y%m%d')
+
     ref_id_pension = str(ref_id_pension).zfill(8)
 
     ref_espacios_blanco = str(ref_espacios_blanco).ljust(12,' ')
+
+    ref_fech2 = ref_fech2.strftime('%Y%m%d')
     
     banco = str(banco).zfill(2)
     
