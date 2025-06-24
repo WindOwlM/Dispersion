@@ -6,7 +6,12 @@ def crear_dispersion(tipo_documento,
                      segundo_nombre,
                      periodo_nomina_anio,
                      periodo_nomina_mes,
-                     referencia,
+                     ref_tipo_documento,
+                     ref_num_doc,
+                     ref_fech,
+                     ref_id_pension,
+                     ref_espacios_blanco,
+                     ref_fech2,
                      banco,
                      sucursal,
                      cuenta,
@@ -35,7 +40,11 @@ def crear_dispersion(tipo_documento,
     
     periodo_nomina = f"{periodo_nomina_anio}{periodo_nomina_mes:02d}"
     
-    referencia = str(referencia).ljust(50,' ')
+    ref_num_doc = str(ref_num_doc).zfill(12)
+
+    ref_id_pension = str(ref_id_pension).zfill(8)
+
+    ref_espacios_blanco = str(ref_espacios_blanco).ljust(12,' ')
     
     banco = str(banco).zfill(2)
     
@@ -65,7 +74,7 @@ def crear_dispersion(tipo_documento,
     primer_nombre_repre = str(primer_nombre_repre).ljust(15,' ')
     segundo_nombre_repre = str(segundo_nombre_repre).ljust(15,' ')
     
-    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{referencia}{banco}{sucursal}{cuenta}{tipo_cuenta}{valor_neto}{tipo_documento_ant}{documento_ant}{fecha_gen_mageti}{fecha_apli_pag}{tipo_documento_repre}{documento_repre}{primer_apellido_repre}{segundo_apellido_repre}{primer_nombre_repre}{segundo_nombre_repre}."
+    linea_completa = f"{tipo_documento}{documento}{primer_apellido}{segundo_apellido}{primer_nombre}{segundo_nombre}{periodo_nomina}{ref_tipo_documento}{ref_num_doc}{ref_fech}{ref_id_pension}{ref_espacios_blanco}{ref_fech2}{banco}{sucursal}{cuenta}{tipo_cuenta}{valor_neto}{tipo_documento_ant}{documento_ant}{fecha_gen_mageti}{fecha_apli_pag}{tipo_documento_repre}{documento_repre}{primer_apellido_repre}{segundo_apellido_repre}{primer_nombre_repre}{segundo_nombre_repre}."
     
     return linea_completa
 

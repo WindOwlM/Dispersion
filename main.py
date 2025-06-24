@@ -39,8 +39,23 @@ with st.expander("Linea 1"):
     periodo_nomina_anio = periodo_nomina.year
     periodo_nomina_mes = periodo_nomina.month
 
-    #dato 8
-    referencia = st.text_input("Referencia emitida por colpensiones")
+    #dato 8 aqui inician los campos de referencia
+    ref_tipo_documento = st.selectbox("Tipo de documento referencia",["CC","TI","CE","RC","PA"])
+
+    #dato 2 de referencia
+    ref_num_doc = st.text_input("Numero documento referencia", max_chars=12)
+
+    #dato 3 de referencia
+    ref_fech = st.date_input("Fecha referencia(AAAAMMDD)", max_chars=8, min_value=min_value)
+
+    #dato 4 de referencia
+    ref_id_pension = st.text_input("Id de la pension referencia", max_chars=8)
+
+    #dato 5 de referencia
+    ref_espacios_blanco = st.text_input("12 espacios en blanco", disabled=True)
+
+    #dato 6 de referencia
+    ref_fech2 = st.date_input("Fecha referencia 2(AAAAMMDD)", max_chars=8, min_value=min_value)
 
     #dato 9
     banco = st.text_input("Codigo de banco (2 digitos max)", max_chars=2)
@@ -99,7 +114,12 @@ with st.expander("Linea 1"):
                                                     segundo_nombre,
                                                     periodo_nomina_anio,
                                                     periodo_nomina_mes,
-                                                    referencia,
+                                                    ref_tipo_documento,
+                                                    ref_num_doc,
+                                                    ref_fech,
+                                                    ref_id_pension,
+                                                    ref_espacios_blanco,
+                                                    ref_fech2,
                                                     banco,
                                                     sucursal,
                                                     cuenta,
