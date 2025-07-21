@@ -241,6 +241,10 @@ def Orden_no_pago(tipo_documento,
                   segundo_nombre_onp,
                   periodo_nomina_onp,
                   referencia_tipo_documento,
+                  referencia_num_documento,
+                  referencia_fecha1,
+                  referencia_id_pension,
+                  referencia_fecha2,
                   codigo_banco,
                   sucursal_banco,
                   cuenta_onp,
@@ -262,7 +266,8 @@ def Orden_no_pago(tipo_documento,
      segundo_apellido_onp = str(segundo_apellido_onp).ljust(15,' ')
      primer_nombre_onp = str(primer_nombre_onp).ljust(15,' ')
      segundo_nombre_onp = str(segundo_nombre_onp).ljust(15,' ')
-     
+     referencia_num_documento = str(referencia_num_documento).zfill(12)
+     referencia_id_pension = str(referencia_id_pension).zfill(8)
      sucursal_banco = str(sucursal_banco).zfill(4)
      cuenta_onp = str(cuenta_onp).zfill(20)
      Valor_neto_onp = str(Valor_neto_onp).zfill(12)
@@ -276,7 +281,7 @@ def Orden_no_pago(tipo_documento,
      hora_pago = str(hora_pago).ljust(5,' ')
      
 
-     linea_completa = f"{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_tipo_documento}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}{descripcion_causal_np}{respuesta_banco}{valor_reintegro}{desc_causal_np_banco}{causal_np_banco}{fecha_pago_reintegro}{hora_pago}."
+     linea_completa = f"{tipo_documento}{num_documento_onp}{primer_apellido_onp}{segundo_apellido_onp}{primer_nombre_onp}{segundo_nombre_onp}{periodo_nomina_onp}{referencia_tipo_documento}{referencia_num_documento}{referencia_fecha1}{referencia_id_pension}{"            "}{referencia_fecha2}{codigo_banco}{sucursal_banco}{cuenta_onp}{tipo_cuenta_onp}{Valor_neto_onp}{estado_pago}{fecha_onp}{fecha_fallecimiento}{descripcion_causal_np}{respuesta_banco}{valor_reintegro}{desc_causal_np_banco}{causal_np_banco}{fecha_pago_reintegro}{hora_pago}."
      
      return linea_completa
 

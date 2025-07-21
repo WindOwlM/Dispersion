@@ -395,6 +395,18 @@ with st.expander("Linea 1"):
 
     #dato 8 Desde este dato inician los campos de la referencia
     referencia_tipo_documento= st.selectbox("Tipo de documento para la referencia",["CC","CE","RC","TI","PA"])
+
+    #dato 9 Tipo de documento referencia
+    referencia_num_documento= st.text_input("Numero documento para la referencia", max_chars=12)
+
+    #dato 10 Fecha 1 referencia
+    referencia_fecha1= st.text_input("Fecha 1 referencia AAAAMMDD", max_chars=8)
+
+    #dato 11 Referencia Id de la pension
+    referencia_id_pension= st.text_input("ID de la pension", max_chars=8)
+
+    #dato 11 Fecha 2 referencia
+    referencia_fecha2= st.text_input("Fecha 2 referencia AAAAMMDD", max_chars=8)
  
     #dato 9
     codigo_banco= st.text_input("Codigo del banco", max_chars=2)
@@ -453,6 +465,10 @@ with st.expander("Linea 1"):
                                                  segundo_nombre_onp,
                                                  periodo_nomina_onp,
                                                  referencia_tipo_documento,
+                                                 referencia_num_documento,
+                                                 referencia_fecha1,
+                                                 referencia_id_pension,
+                                                 referencia_fecha2,
                                                  codigo_banco,
                                                  sucursal_banco,
                                                  cuenta_onp,
