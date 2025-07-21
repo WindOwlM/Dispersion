@@ -393,8 +393,8 @@ with st.expander("Linea 1"):
     #dato 7
     periodo_nomina_onp= st.text_input("Periodo nomina en formato AAAAMM", max_chars=6)
 
-    #dato 8
-    referencia_onp= st.text_input("Referencia (Informacion remitida por Colpensiones)", max_chars=50)
+    #dato 8 Desde este dato inician los campos de la referencia
+    referencia_tipo_documento= st.selectbox("Tipo de documento",["CC","CE","RC","TI","PA"])
  
     #dato 9
     codigo_banco= st.text_input("Codigo del banco", max_chars=2)
@@ -452,7 +452,7 @@ with st.expander("Linea 1"):
                                                  primer_nombre_onp,
                                                  segundo_nombre_onp,
                                                  periodo_nomina_onp,
-                                                 referencia_onp,
+                                                 referencia_tipo_documento,
                                                  codigo_banco,
                                                  sucursal_banco,
                                                  cuenta_onp,
